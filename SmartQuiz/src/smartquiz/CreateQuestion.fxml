@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartquiz.CreateQuestionController">
+   <children>
+      <VBox fx:id="createQuestion_page" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <AnchorPane prefHeight="101.0" prefWidth="1100.0">
+               <children>
+                  <Button fx:id="MainMenu" layoutX="40.0" layoutY="19.0" mnemonicParsing="false" onAction="#goHome" prefHeight="38.0" prefWidth="95.0" text="Menu">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="326.0" layoutY="22.0" text="Create Your Question with Option">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="334.0" prefWidth="1100.0">
+               <children>
+                  <TextField fx:id="question_text" layoutX="120.0" layoutY="58.0" prefHeight="52.0" prefWidth="860.0" promptText="Enter Your Question here">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </TextField>
+                  <RadioButton fx:id="radio_button1" layoutX="120.0" layoutY="141.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="[A]">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="radio_button_group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <TextField fx:id="option_text1" layoutX="193.0" layoutY="139.0" prefHeight="40.0" prefWidth="340.0" promptText="Enter Option-1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <RadioButton fx:id="radio_button3" layoutX="120.0" layoutY="213.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="[C]" toggleGroup="$radio_button_group">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </RadioButton>
+                  <TextField fx:id="option_text3" layoutX="193.0" layoutY="211.0" prefHeight="40.0" prefWidth="340.0" promptText="Enter Option-3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <RadioButton fx:id="radio_button2" layoutX="560.0" layoutY="141.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="[B]" toggleGroup="$radio_button_group">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </RadioButton>
+                  <TextField fx:id="option_text2" layoutX="633.0" layoutY="139.0" prefHeight="40.0" prefWidth="340.0" promptText="Enter Option-2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <RadioButton fx:id="radio_button4" layoutX="560.0" layoutY="213.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="[D]" toggleGroup="$radio_button_group">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </RadioButton>
+                  <TextField fx:id="option_text4" layoutX="633.0" layoutY="211.0" prefHeight="40.0" prefWidth="340.0" promptText="Enter Option-4">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="153.0" prefWidth="1100.0">
+               <children>
+                  <Button fx:id="Qcancel" layoutX="153.0" layoutY="14.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="131.0" text="Cancel">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Qdelete" layoutX="338.0" layoutY="14.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="131.0" text="Delete">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="saveQuestion" layoutX="638.0" layoutY="14.0" mnemonicParsing="false" onAction="#doSaveQuestion" prefHeight="46.0" prefWidth="131.0" text="Save">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="previewQuestion" layoutX="823.0" layoutY="14.0" mnemonicParsing="false" onAction="#doPreviewQuestion" prefHeight="46.0" prefWidth="131.0" text="Preview">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
