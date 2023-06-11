@@ -23,7 +23,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class Login_pageController implements Initializable {
-    
+
     //signupForm here
     @FXML
     private BorderPane signupForm;
@@ -37,8 +37,7 @@ public class Login_pageController implements Initializable {
     private TextField institutionName;
     @FXML
     private Button su_signup;
-    
-    
+
     //login Form
     @FXML
     private BorderPane loginForm;
@@ -52,8 +51,7 @@ public class Login_pageController implements Initializable {
     private Button u_forgotPassword;
     @FXML
     private Button u_login;
-    
-    
+
     //go login to signup or    
     @FXML
     private Button su_alreadyAccount;
@@ -63,29 +61,23 @@ public class Login_pageController implements Initializable {
     private Button u_registerAccount;
     @FXML
     private Button u_createAccount;
-    
-    
-    
-    
-    
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
-    
     //On action browse other page (loginForm , singupForm)
     @FXML
     private void goSignupForm(ActionEvent event) {
         loginForm.setVisible(false);
-        signupForm.setVisible(true);        
+        signupForm.setVisible(true);
     }
 
     @FXML
     private void goLoginForm(ActionEvent event) {
         loginForm.setVisible(true);
-        signupForm.setVisible(false);  
+        signupForm.setVisible(false);
     }
 
     // forgot and show password
@@ -96,20 +88,20 @@ public class Login_pageController implements Initializable {
             u_password.setPromptText(u_password.getText());
             u_password.setText("");
         } else {
-           u_password.setText(u_password.getPromptText());
+            u_password.setText(u_password.getPromptText());
         }
     }
 
     @FXML
     private void forgotPassword(ActionEvent event) {
     }
-    
+
     // login or signup =======================================================do================================
     // this code for login 
     private Connection connect;
     private PreparedStatement prepare;
     private ResultSet result;
- 
+
     @FXML
     public void loginAccount() {
         String sql = "SELECT email, password FROM admin WHERE email = ? and password = ?";
@@ -140,8 +132,7 @@ public class Login_pageController implements Initializable {
                     alert.setHeaderText(null);
                     alert.setContentText("Successfully Login");
                     alert.showAndWait();
-                    
-                 
+
                     //to go home 
                     u_login.getScene().getWindow().hide();
                     // show Home
@@ -167,7 +158,6 @@ public class Login_pageController implements Initializable {
         }
     }
 
-    
     @FXML
     public void signupAccount() {
         String sql = "INSERT INTO admin (email, password, fullname, institution) VALUES ( ?, ?, ?, ?)";
@@ -221,7 +211,7 @@ public class Login_pageController implements Initializable {
                         alert.setHeaderText(null);
                         alert.setContentText("Successfully Create Account Welcome SMARTQuiz");
                         alert.showAndWait();
-                        
+
                         su_email.setText("");
                         su_confirmPassword1.setText("");
                         fullName.setText("");

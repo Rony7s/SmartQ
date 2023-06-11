@@ -1,3 +1,6 @@
+//Rony Ahmmed BDU-EdTech
+//Home page after login here
+// have 5 item>> Home, Question Bank, Take Exam, Join Exam, Settinf, About
 package smartquiz;
 
 import java.net.URL;
@@ -23,7 +26,6 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
- 
 public class HomeController implements Initializable {
 
     @FXML
@@ -78,40 +80,52 @@ public class HomeController implements Initializable {
     private AnchorPane Home_index13;
     @FXML
     private AnchorPane Home_index14;
-     
+    @FXML
+    private TextField setting_name;
+    @FXML
+    private TextField setting_email;
+    @FXML
+    private TextField setting_University;
+    @FXML
+    private TextField setting_Department;
+    @FXML
+    private TextField setting_password;
+    @FXML
+    private Button setting_save;
+    @FXML
+    private Button signOut;
+    @FXML
+    private Button helpAndSupport;
 
-    /**
-     * Initializes the controller class.
-     */
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         //for Digital watch
-        
+
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> updateTime()));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
-        
-    }    
+
+        appUser.setText("Mr. User");
+
+    }
 
     //update time
-    
     private void updateTime() {
         LocalDateTime currentTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         String formattedTime = currentTime.format(formatter);
         timeText.setText(formattedTime);
-        
+
         DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("E, MMM dd yyyy");
         String formattedTime1 = currentTime.format(formatter1);
         dateText.setText(formattedTime1);
     }
-    
 
     @FXML
     private void goProfile_page(ActionEvent event) {
-        
-        
+
         Profile_page.setVisible(true);
         QuestionBank_page.setVisible(false);
         TakeExam_page.setVisible(false);
@@ -122,7 +136,7 @@ public class HomeController implements Initializable {
 
     @FXML
     private void goQuestionBank_page(ActionEvent event) {
-        
+
         Profile_page.setVisible(false);
         QuestionBank_page.setVisible(true);
         TakeExam_page.setVisible(false);
@@ -133,7 +147,7 @@ public class HomeController implements Initializable {
 
     @FXML
     private void goTakeExam_page(ActionEvent event) {
-        
+
         Profile_page.setVisible(false);
         QuestionBank_page.setVisible(false);
         TakeExam_page.setVisible(true);
@@ -155,7 +169,7 @@ public class HomeController implements Initializable {
 
     @FXML
     private void goSettings_page(ActionEvent event) {
-        
+
         Profile_page.setVisible(false);
         QuestionBank_page.setVisible(false);
         TakeExam_page.setVisible(false);
@@ -166,7 +180,7 @@ public class HomeController implements Initializable {
 
     @FXML
     private void goAbout_page(ActionEvent event) {
-        
+
         Profile_page.setVisible(false);
         QuestionBank_page.setVisible(false);
         TakeExam_page.setVisible(false);
@@ -175,11 +189,9 @@ public class HomeController implements Initializable {
         About_page.setVisible(true);
     }
 
-    
-    
     @FXML
-    private void goCreateQuestion_page( ) {
-        
+    private void goCreateQuestion_page() {
+
         try {
             //to Create Question page
             addNewQuestions.getScene().getWindow().hide();
@@ -190,16 +202,11 @@ public class HomeController implements Initializable {
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-            
 
         } catch (Exception e) {
             System.out.println("sorry, page is missing mama");
         }
-                    
-        
-        
-        
-        
+
     }
 
     @FXML
@@ -216,15 +223,57 @@ public class HomeController implements Initializable {
             stage.show();
 
         } catch (Exception e) {
-            System.out.println("sorry,exam  page is missing mama");
+            System.out.println("sorry,exam  page is missing Sir" + e);
         }
-        
-        
+
     }
 
     @FXML
     private void doQbankSeeQuestions(ActionEvent event) {
+
+        try {
+            //to see question page
+            QbankSeeQuestions.getScene().getWindow().hide();
+            // show exam page
+
+            Parent root = FXMLLoader.load(getClass().getResource("QuestionView.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (Exception e) {
+            System.out.println("sorry,Bank  page is missing Sir" + e);
+        }
     }
 
-    
+    @FXML
+    private void doSetting_save(ActionEvent event) {
+        System.out.println("Save Setting Information");
+    }
+
+    @FXML
+    private void doSignOut(ActionEvent event) {
+        System.out.println("Sing-Out");
+        try {
+            //to Close runnige page
+            signOut.getScene().getWindow().hide();
+            //show Login page
+
+            Parent root = FXMLLoader.load(getClass().getResource("Login_page.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (Exception e) {
+            System.out.println("sorry,exam  page is missing Sir" + e);
+        }
+    }
+
+    @FXML
+    private void doHelpAndSupport(ActionEvent event) {
+        System.out.println("Help me");
+    }
+
 }

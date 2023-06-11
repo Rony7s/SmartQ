@@ -1,4 +1,5 @@
 //Rony Ahmmed BDU-EdTech
+//SMARTQuiz
 package smartquiz;
 
 import javafx.application.Application;
@@ -11,7 +12,7 @@ public class SmartQuiz extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Exam_page.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Login_page.fxml"));
         
         Scene scene = new Scene(root);
         stage.setScene(scene);

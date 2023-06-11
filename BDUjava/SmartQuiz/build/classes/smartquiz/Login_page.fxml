@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -15,25 +16,25 @@
    <children>
       <BorderPane fx:id="loginForm" prefHeight="200.0" prefWidth="200.0">
          <left>
-            <AnchorPane prefHeight="550.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="550.0" prefWidth="400.0" styleClass="bodyColor" stylesheets="@home.css" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="119.0" layoutY="89.0" text="Welcome">
+                  <Label layoutX="119.0" layoutY="89.0" styleClass="Login_form_Logo" text="Welcome">
                      <font>
                         <Font name="Tahoma" size="40.0" />
                      </font>
                   </Label>
-                  <Label layoutX="84.0" layoutY="158.0" text="SMARTQuiz">
+                  <Label layoutX="84.0" layoutY="158.0" styleClass="Login_form_Logo" stylesheets="@home.css" text="SMARTQuiz">
                      <font>
                         <Font name="Tahoma Bold" size="40.0" />
                      </font>
                   </Label>
-                  <Label layoutX="257.0" layoutY="200.0" text="Like A Game!" />
+                  <Label layoutX="257.0" layoutY="200.0" styleClass="Login_form_Logo" text="Like A Game!" />
                   <Button fx:id="u_registerAccount" layoutX="67.0" layoutY="418.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="265.0" text="Login Account" textAlignment="CENTER">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="u_createAccount" layoutX="67.0" layoutY="470.0" mnemonicParsing="false" onAction="#goSignupForm" prefHeight="40.0" prefWidth="265.0" text="Create  Account" textAlignment="CENTER">
+                  <Button fx:id="u_createAccount" layoutX="67.0" layoutY="470.0" mnemonicParsing="false" onAction="#goSignupForm" prefHeight="40.0" prefWidth="265.0" styleClass="button_Login_form" text="Create  Account" textAlignment="CENTER">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -41,10 +42,10 @@
                </children>
             </AnchorPane>
          </left>
-         <right>
-            <AnchorPane prefHeight="550.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <center>
+            <AnchorPane prefHeight="550.0" prefWidth="400.0" style="-fx-background-color: #ddd;" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="114.0" layoutY="124.0" text="LOGIN USER FORM">
+                  <Label layoutX="114.0" layoutY="124.0" styleClass="Login_form_Logo" stylesheets="@home.css" text="LOGIN USER FORM">
                      <font>
                         <Font name="Tahoma" size="20.0" />
                      </font>
@@ -54,50 +55,54 @@
                         <Font name="Tahoma" size="15.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="u_login" layoutX="91.0" layoutY="330.0" mnemonicParsing="false" onAction="#loginAccount" prefHeight="40.0" prefWidth="240.0" text="Log in">
+                  <Button fx:id="u_login" layoutX="91.0" layoutY="330.0" mnemonicParsing="false" onAction="#loginAccount" prefHeight="40.0" prefWidth="240.0" stylesheets="@home.css" text="Log in">
                      <font>
                         <Font name="Tahoma" size="20.0" />
                      </font>
+                     <styleClass>
+                        <String fx:value="button" />
+                        <String fx:value="button_Login_form" />
+                     </styleClass>
                   </Button>
                   <PasswordField fx:id="u_password" layoutX="91.0" layoutY="252.0" prefHeight="40.0" prefWidth="240.0" promptText="Password">
                      <font>
                         <Font name="Tahoma" size="15.0" />
                      </font>
                   </PasswordField>
-                  <FontAwesomeIcon glyphName="USER" layoutX="192.0" layoutY="104.0" size="4em" />
-                  <FontAwesomeIcon glyphName="USER" layoutX="57.0" layoutY="230.0" size="2em" text="" />
-                  <FontAwesomeIcon glyphName="LOCK" layoutX="58.0" layoutY="280.0" size="2em" />
+                  <FontAwesomeIcon fill="#f22a00" glyphName="USER" layoutX="192.0" layoutY="104.0" size="4em" />
+                  <FontAwesomeIcon fill="GREEN" glyphName="KEY" layoutX="58.0" layoutY="280.0" size="2em" />
                   <RadioButton fx:id="u_showPassword" contentDisplay="TOP" layoutX="281.0" layoutY="302.0" mnemonicParsing="false" onAction="#showPassword" text="show" />
                   <Button fx:id="u_forgotPassword" layoutX="91.0" layoutY="298.0" mnemonicParsing="false" onAction="#forgotPassword" opacity="0.49" text="Forgot Password?">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Button>
+                  <FontAwesomeIcon fill="GREEN" glyphName="PHONE" layoutX="56.0" layoutY="230.0" size="2em" />
                </children>
             </AnchorPane>
-         </right>
+         </center>
       </BorderPane>
       <BorderPane fx:id="signupForm" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false">
          <left>
-            <AnchorPane prefHeight="550.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="550.0" prefWidth="400.0" styleClass="bodyColor" stylesheets="@home.css" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="119.0" layoutY="89.0" text="Welcome">
+                  <Label layoutX="119.0" layoutY="89.0" styleClass="Login_form_Logo" text="Welcome">
                      <font>
                         <Font name="Tahoma" size="40.0" />
                      </font>
                   </Label>
-                  <Label layoutX="84.0" layoutY="158.0" text="SMARTQuiz">
+                  <Label layoutX="84.0" layoutY="158.0" styleClass="Login_form_Logo" text="SMARTQuiz">
                      <font>
                         <Font name="Tahoma Bold" size="40.0" />
                      </font>
                   </Label>
-                  <Label layoutX="257.0" layoutY="200.0" text="Like A Game!" />
+                  <Label layoutX="257.0" layoutY="200.0" styleClass="Login_form_Logo" text="Like A Game!" />
                   <Button fx:id="su_registerAccount" layoutX="67.0" layoutY="418.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="265.0" text="Register Account" textAlignment="CENTER">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="su_alreadyAccount" layoutX="67.0" layoutY="470.0" mnemonicParsing="false" onAction="#goLoginForm" prefHeight="40.0" prefWidth="265.0" text="Already Have an Account" textAlignment="CENTER">
+                  <Button fx:id="su_alreadyAccount" layoutX="67.0" layoutY="470.0" mnemonicParsing="false" onAction="#goLoginForm" prefHeight="40.0" prefWidth="265.0" styleClass="button_Login_form" stylesheets="@home.css" text="Already Have an Account" textAlignment="CENTER">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -106,9 +111,9 @@
             </AnchorPane>
          </left>
          <center>
-            <AnchorPane prefHeight="550.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="550.0" prefWidth="400.0" styleClass="bodyColor" stylesheets="@home.css" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="98.0" layoutY="134.0" text="REGISTER USER FORM">
+                  <Label layoutX="98.0" layoutY="134.0" styleClass="whiteText" text="REGISTER USER FORM">
                      <font>
                         <Font name="Tahoma" size="20.0" />
                      </font>
@@ -118,21 +123,21 @@
                         <Font name="Tahoma" size="15.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="su_signup" layoutX="92.0" layoutY="427.0" mnemonicParsing="false" onAction="#signupAccount" prefHeight="40.0" prefWidth="240.0" text="Sign Up">
+                  <Button fx:id="su_signup" layoutX="92.0" layoutY="427.0" mnemonicParsing="false" onAction="#signupAccount" prefHeight="40.0" prefWidth="240.0" styleClass="button_Login_form" text="Sign Up">
                      <font>
                         <Font name="Tahoma" size="20.0" />
                      </font>
                   </Button>
-                  <PasswordField fx:id="su_confirmPassword1" layoutX="91.0" layoutY="252.0" prefHeight="40.0" prefWidth="240.0" promptText="Confirm Password">
+                  <PasswordField fx:id="su_confirmPassword1" layoutX="91.0" layoutY="252.0" prefHeight="40.0" prefWidth="240.0" promptText="Enter Password">
                      <font>
                         <Font name="Tahoma" size="15.0" />
                      </font>
                   </PasswordField>
-                  <FontAwesomeIcon glyphName="USER_PLUS" layoutX="177.0" layoutY="114.0" size="5em" />
-                  <FontAwesomeIcon glyphName="USER" layoutX="54.0" layoutY="332.0" size="2em" />
-                  <FontAwesomeIcon glyphName="LOCK" layoutX="56.0" layoutY="280.0" size="2em" />
-                  <FontAwesomeIcon glyphName="UNIVERSITY" layoutX="50.0" layoutY="390.0" size="2em" />
-                  <FontAwesomeIcon glyphName="PHONE" layoutX="54.0" layoutY="228.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" layoutX="177.0" layoutY="114.0" size="5em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="54.0" layoutY="332.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="LOCK" layoutX="56.0" layoutY="280.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="UNIVERSITY" layoutX="50.0" layoutY="390.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="PHONE" layoutX="54.0" layoutY="228.0" size="2em" />
                   <TextField fx:id="fullName" layoutX="92.0" layoutY="303.0" prefHeight="40.0" prefWidth="240.0" promptText="Enter Full Name">
                      <font>
                         <Font name="Tahoma" size="15.0" />

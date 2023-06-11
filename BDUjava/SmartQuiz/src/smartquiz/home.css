@@ -1,7 +1,41 @@
-/*
- * Empty Stylesheet file.
- */
-
 .mainFxmlClass {
 
+}
+
+.bodyColor{
+    -fx-background-color: #00008b;
+    -fx-text-fill:#ffffff;
+}
+.whiteText{
+    -fx-text-fill:#ffffff;
+}
+
+.button {
+
+    -fx-font-size: 20px;
+    -fx-text-fill:#00008b;
+    -fx-background-color: #00008b;
+     
+    -fx-border-width: 1px;
+    -fx-border-color: #ddd;
+    -fx-text-fill:#ffffff;
+
+
+}
+
+.button:hover {
+    -fx-text-fill:green;
+    -fx-background-color: #ffffff;
+    -fx-border-width: 2px;
+    -fx-border-radius: 2px;
+    -fx-border-color: green;
+     
+}
+
+.Login_form_Logo{
+    -fx-text-fill: linear-gradient(to Right, #4285F4, #DB4437, #F4B400, #0F9D58);
+}
+
+.button_Login_form{
+    -fx-background-color: green;
 }

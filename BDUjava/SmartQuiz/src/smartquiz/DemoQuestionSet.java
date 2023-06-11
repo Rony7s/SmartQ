@@ -1,4 +1,5 @@
-//Demo Question set
+//Rony Ahmmed BDU-EdTech
+//Demo Question set. here have 10 question about Bangladesh
 package smartquiz;
 
 public class DemoQuestionSet {
